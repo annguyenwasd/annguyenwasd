@@ -13,7 +13,6 @@ const GlobalStyle = createGlobalStyle`
 
    body {
      background-color: ${bgc};
-     color: ${color};
    }
 `;
 
@@ -75,7 +74,7 @@ const Footer = styled.footer`
   position: relative;
 
   ${StyledIconBase} {
-    color: white;
+    color: ${color};
     width: 36px;
     margin: 0 5px;
   }
@@ -86,7 +85,7 @@ const Navigation = styled.nav`
   justify-content: flex-end;
 
   a {
-    color: white;
+    color: ${color};
     font-weight: bold;
     margin: 0 20px;
 
