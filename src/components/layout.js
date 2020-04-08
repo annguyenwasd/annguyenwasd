@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { bgc, color } from 'utils/theme';
 import { StyledIconBase } from '@styled-icons/styled-icon';
 import { Github, Twitter, Skype } from '@styled-icons/boxicons-logos';
 import { MailSend } from '@styled-icons/boxicons-regular';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
+
+import Switch from 'components/theme-mode-toggle';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -13,11 +16,19 @@ const GlobalStyle = createGlobalStyle`
 
    body {
      background-color: ${bgc};
+     color: ${color};
    }
 `;
 
 function Layout({ children }) {
-  const [mode, setMode] = useState('dark');
+  const [mode, setMode] = useState('light');
+
+  useEffect(() => {
+    const storedMode = localStorage.getItem('mode');
+    if (storedMode && storedMode !== mode) {
+      setMode(storedMode);
+    }
+  }, []);
 
   return (
     <ThemeProvider theme={{ mode }}>
@@ -32,6 +43,14 @@ function Layout({ children }) {
             <Link to="/experience" title="experience">
               exp
             </Link>
+            <Switch
+              checked={mode === 'dark'}
+              onChange={() => {
+                const newMode = mode === 'dark' ? 'light' : 'dark';
+                setMode(newMode);
+                localStorage.setItem('mode', newMode);
+              }}
+            />
           </Navigation>
         </header>
         <main>{children}</main>
@@ -106,7 +125,9 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-Layout.propTypes = {};
+Layout.propTypes = {
+  children: PropTypes.node
+};
 
 Layout.defaultProps = {};
 

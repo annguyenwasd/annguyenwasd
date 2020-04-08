@@ -1,11 +1,17 @@
 import theme from 'styled-theming';
 
+export const colors = {
+  red: '#a23434',
+  black: '#181313',
+  white: '#fff'
+};
+
 export const bgc = theme('mode', {
-  light: 'white',
-  dark: '#a23434'
+  light: colors.red,
+  dark: colors.black
 });
 
 export const color = theme('mode', {
-  light: '#181313',
-  dark: 'white'
+  light: colors.black,
+  dark: colors.white
 });

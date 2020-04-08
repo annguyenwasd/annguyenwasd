@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import TypeIt from 'typeit-react';
 import styled from 'styled-components';
 
 import Layout from 'components/layout';
 import SEO from 'components/seo';
-import { color } from 'utils/theme';
 
 function IndexPage() {
   const [typeIt, setTypeIt] = useState(null);
-  const key = Date.now();
+  const [key] = useState(Date.now());
 
   return (
     <Layout>
       <SEO title="Home" />
       <Heading>
         <TypeIt
+          key={key}
           onMouseOver={() => typeIt.freeze()}
           onMouseOut={() => typeIt.unfreeze()}
           options={{
@@ -67,7 +66,6 @@ function IndexPage() {
 const Heading = styled.div`
   font-weight: 300;
   font-size: 3rem;
-  color: ${color};
 
   @media screen and (min-width: 426px) {
     padding-top: 20%;
