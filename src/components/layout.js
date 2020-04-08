@@ -30,7 +30,7 @@ function Layout({ children }) {
               /
             </Link>
             <Link to="/experience" title="experience">
-              xp
+              exp
             </Link>
           </Navigation>
         </header>
@@ -44,11 +44,11 @@ function Layout({ children }) {
             <Github title="@annguyenwasd" />
           </a>
           <a
-            href="https://twitter.com/AnNguye27219186"
+            href="https://twitter.com/annguyenwasd"
             rel="noopener noreferrer"
             target="_blank"
           >
-            <Twitter title="@AnNguye27219186" />
+            <Twitter title="@annguyenwasd" />
           </a>
           <a
             href="skype:live:an.nguyenwasd?chat"
@@ -72,6 +72,7 @@ const Footer = styled.footer`
   align-items: center;
   width: 100%;
   position: relative;
+  padding-bottom: 20px;
 
   ${StyledIconBase} {
     color: ${color};

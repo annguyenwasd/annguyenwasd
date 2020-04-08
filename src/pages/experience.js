@@ -16,7 +16,7 @@ import Layout from 'components/layout';
 function Experience() {
   return (
     <Layout>
-      <SEO title="xp" />
+      <SEO title="Exp" />
       <Wrapper>
         <VerticalTimeline>
           <XP

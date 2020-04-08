@@ -41,7 +41,7 @@ function IndexPage() {
               .move('START')
               .move(1)
               .delete(1)
-              .type('H')
+              .type('H', { delay: 2000, speed: 300 })
               .move(10)
               .delete(2)
               .type(
