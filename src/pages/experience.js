@@ -12,6 +12,13 @@ import XP from 'components/experience';
 
 import SEO from 'components/seo';
 import Layout from 'components/layout';
+import exp from 'data/exp';
+
+const timelineLogos = {
+  [ReactLogo.displayName]: <ReactLogo />,
+  [Angular.displayName]: <Angular />,
+  [CodeCurly.displayName]: <CodeCurly />
+};
 
 function Experience() {
   return (
@@ -19,41 +26,16 @@ function Experience() {
       <SEO title="Exp" />
       <Wrapper>
         <VerticalTimeline>
-          <XP
-            date="12/2018-10/2019"
-            icon={<ReactLogo />}
-            subTitle="Front-end developer"
-            title="DOL Tech"
-            content={[
-              'Structure database modal in GraphCMS',
-              'Build landing pages using Gatsby JS',
-              'Setup && build SPA applications using React JS',
-              'Interview new front-end members'
-            ]}
-          />
-          <XP
-            date="07/2018-04/2019"
-            icon={<Angular />}
-            subTitle="Front-end developer"
-            title="ULO Technologies"
-            content={[
-              'Structure && build SPA application',
-              'Apply Google Cloud Firebase for building real-time chat app',
-              'Apply Google Cloud Functions for expose api for back end application calls'
-            ]}
-          />
-
-          <XP
-            date="10/2015-07/2018"
-            icon={<CodeCurly />}
-            subTitle="Java & Front-end developer"
-            title="FPT Software HCM"
-            content={[
-              'Implement Views in android application',
-              'Research MEAN stack',
-              'Onsite in Malaysia as front-end developer'
-            ]}
-          />
+          {exp.map(({ company, position, date, logo, responsibilities }) => (
+            <XP
+              key={company}
+              date={date}
+              icon={timelineLogos[logo]}
+              subTitle={position}
+              title={company}
+              content={responsibilities}
+            />
+          ))}
           <VerticalTimelineElement
             iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
             icon={<Star />}

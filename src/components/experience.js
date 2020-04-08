@@ -33,9 +33,7 @@ const List = styled.ul`
   }
 `;
 
-const SubTitle = styled.h4.attrs({
-  className: 'Interview new front-end members'
-})`
+const SubTitle = styled.h4`
   margin: 10px 0;
   color: #969696 !important;
   font-weight: normal;
