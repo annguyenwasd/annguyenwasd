@@ -6,7 +6,7 @@ import { Github, Twitter, Skype } from '@styled-icons/boxicons-logos';
 import { MailSend } from '@styled-icons/boxicons-regular';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
-import { changeMode } from 'actions';
+import { changeMode } from 'state/actions';
 
 import Switch from 'components/theme-mode-toggle';
 import { connect } from 'react-redux';
