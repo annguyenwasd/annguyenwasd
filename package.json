@@ -47,6 +47,7 @@
   ],
   "license": "MIT",
   "scripts": {
+    "deploy": "yarn build && yarn copy-cname && cd public && surge",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -54,7 +55,6 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "copy-cname": "cp ./CNAME ./public/CNAME",
-    "deploy": "yarn build && yarn copy-cname && cd public && surge",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
