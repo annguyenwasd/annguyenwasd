@@ -6,8 +6,10 @@ import { Github, Twitter, Skype } from '@styled-icons/boxicons-logos';
 import { MailSend } from '@styled-icons/boxicons-regular';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import { changeMode } from 'actions';
 
 import Switch from 'components/theme-mode-toggle';
+import { connect } from 'react-redux';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -20,13 +22,11 @@ const GlobalStyle = createGlobalStyle`
    }
 `;
 
-function Layout({ children }) {
-  const [mode, setMode] = useState('light');
-
+function Layout({ children, mode, onChangeMode }) {
   useEffect(() => {
     const storedMode = localStorage.getItem('mode');
     if (storedMode && storedMode !== mode) {
-      setMode(storedMode);
+      onChangeMode(storedMode);
     }
   }, []);
 
@@ -47,7 +47,7 @@ function Layout({ children }) {
               checked={mode === 'dark'}
               onChange={() => {
                 const newMode = mode === 'dark' ? 'light' : 'dark';
-                setMode(newMode);
+                onChangeMode(newMode);
                 localStorage.setItem('mode', newMode);
               }}
             />
@@ -131,4 +131,14 @@ Layout.propTypes = {
 
 Layout.defaultProps = {};
 
-export default Layout;
+const mapStateToProps = state => ({
+  mode: state.mode
+});
+
+const mapDispatchToProps = dispatch => ({
+  onChangeMode: mode => {
+    dispatch(changeMode(mode));
+  }
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

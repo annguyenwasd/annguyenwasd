@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TypeIt from 'typeit-react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import Layout from 'components/layout';
 import SEO from 'components/seo';
+import { connect } from 'react-redux';
 
-function IndexPage() {
+function IndexPage({ themeMode }) {
   const [typeIt, setTypeIt] = useState(null);
-  const [key] = useState(Date.now());
+  const [key, setKey] = useState(Date.now());
+
+  useEffect(() => {
+    setKey(Date.now());
+  }, [themeMode]);
 
   return (
     <Layout>
@@ -72,4 +78,8 @@ const Heading = styled.div`
   }
 `;
 
-export default IndexPage;
+IndexPage.propTypes = {
+  themeMode: PropTypes.string.isRequired
+};
+
+export default connect(state => ({ themeMode: state.mode }), null)(IndexPage);
