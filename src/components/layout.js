@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { bgc, color } from 'utils/theme';
 import { StyledIconBase } from '@styled-icons/styled-icon';
@@ -140,5 +140,10 @@ const mapDispatchToProps = dispatch => ({
     dispatch(changeMode(mode));
   }
 });
+
+Layout.propTypes = {
+  mode: PropTypes.string.isRequired,
+  onChangeMode: PropTypes.func.isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);
