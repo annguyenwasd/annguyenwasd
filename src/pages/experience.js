@@ -1,18 +1,19 @@
-import React from 'react';
+import 'react-vertical-timeline-component/style.min.css';
+
+import { Angular, ReactLogo } from '@styled-icons/boxicons-logos';
+import { Code, CodeCurly, Star } from '@styled-icons/boxicons-regular';
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { Code, Star, CodeCurly } from '@styled-icons/boxicons-regular';
-import { School } from '@styled-icons/boxicons-solid';
-import { ReactLogo, Angular } from '@styled-icons/boxicons-logos';
-import styled from 'styled-components';
-import XP from 'components/experience';
 
-import SEO from 'components/seo';
 import Layout from 'components/layout';
+import React from 'react';
+import SEO from 'components/seo';
+import { School } from '@styled-icons/boxicons-solid';
+import XP from 'components/experience';
 import exp from 'data/exp';
+import styled from 'styled-components';
 
 const timelineLogos = {
   [ReactLogo.displayName]: <ReactLogo />,
@@ -23,7 +24,7 @@ const timelineLogos = {
 function Experience() {
   return (
     <Layout>
-      <SEO title="Exp" />
+      <SEO title="Experience" />
       <Wrapper>
         <VerticalTimeline>
           {exp.map(({ company, position, date, logo, responsibilities }) => (

@@ -1,33 +1,35 @@
-import React from 'react';
-import Switch from 'react-switch';
-import { Moon } from '@styled-icons/boxicons-solid';
-import { Sun } from '@styled-icons/boxicons-regular';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 
-import { colors } from 'utils/theme';
+import { Moon } from '@styled-icons/boxicons-solid';
+import PropTypes from 'prop-types';
+import { Sun } from '@styled-icons/boxicons-regular';
+import Switch from 'react-switch';
 
 function ThemeModeToggle({ checked, onChange }) {
+  const theme = useContext(ThemeContext);
+
   return (
     <Switch
       onChange={onChange}
       checked={checked}
       checkedIcon={<StyledMoon size="20" />}
       uncheckedIcon={<StyledSun size="20" />}
-      offColor={colors.white}
-      onColor={colors.red}
-      offHandleColor={colors.red}
+      onColor="#808080"
+      offColor="#4b697a"
+      offHandleColor={theme.background}
+      onHandleColor={theme.background}
     />
   );
 }
 
 const StyledMoon = styled(Moon)`
-  color: white;
+  color: #faee92;
   margin: 0 0 6px 5px;
 `;
 
 const StyledSun = styled(Sun)`
-  color: ${colors.red};
+  color: #fadf0d;
   margin: 0 0 6px 5px;
 `;
 
