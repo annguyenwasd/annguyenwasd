@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { rhythm } from 'utils/typography';
 import styled from 'styled-components';
 
 function Routes() {
@@ -23,7 +24,7 @@ const Navigation = styled.nav`
 
   a {
     font-weight: bold;
-    margin: 0 20px;
+    margin: 0 ${rhythm(1.2)};
 
     &:last-child {
       margin-right: 0;

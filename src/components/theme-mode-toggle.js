@@ -25,12 +25,12 @@ function ThemeModeToggle({ checked, onChange }) {
 
 const StyledMoon = styled(Moon)`
   color: #faee92;
-  margin: 0 0 6px 5px;
+  margin: 0 0 0px 5px;
 `;
 
 const StyledSun = styled(Sun)`
   color: #fadf0d;
-  margin: 0 0 6px 5px;
+  margin: 0 0 0px 5px;
 `;
 
 ThemeModeToggle.propTypes = {

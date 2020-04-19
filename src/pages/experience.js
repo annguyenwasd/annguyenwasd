@@ -1,7 +1,7 @@
 import 'react-vertical-timeline-component/style.min.css';
 
 import { Angular, ReactLogo } from '@styled-icons/boxicons-logos';
-import { Code, CodeCurly, Star } from '@styled-icons/boxicons-regular';
+import { CodeCurly, Star } from '@styled-icons/boxicons-regular';
 import {
   VerticalTimeline,
   VerticalTimelineElement
@@ -10,7 +10,6 @@ import {
 import Layout from 'components/layout';
 import React from 'react';
 import SEO from 'components/seo';
-import { School } from '@styled-icons/boxicons-solid';
 import XP from 'components/experience';
 import exp from 'data/exp';
 import styled from 'styled-components';

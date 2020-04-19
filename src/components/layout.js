@@ -9,6 +9,7 @@ import { changeMode } from 'state/actions';
 import { connect } from 'react-redux';
 import darkTheme from 'utils/theme/dark';
 import lightTheme from 'utils/theme/light';
+import { rhythm } from 'utils/typography';
 
 function Layout({ children, mode, onChangeMode }) {
   useEffect(() => {
@@ -44,21 +45,6 @@ function Layout({ children, mode, onChangeMode }) {
   );
 }
 
-const Header = styled.header`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const Wrapper = styled.div`
-  height: 100vh;
-  padding: 20px;
-  display: grid;
-  grid-template-rows: 32px 1fr 36px;
-  grid-gap: 10px;
-  max-width: 1280px;
-  margin: 0 auto;
-`;
-
 Layout.propTypes = {
   children: PropTypes.node
 };
@@ -81,3 +67,18 @@ Layout.propTypes = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+
+const Header = styled.header`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Wrapper = styled.div`
+  height: 100vh;
+  padding: ${rhythm(1.25)};
+  display: grid;
+  grid-template-rows: ${rhythm(2)} 1fr ${rhythm(2.5)};
+  grid-gap: ${rhythm(0.8)};
+  max-width: 1280px;
+  margin: 0 auto;
+`;
