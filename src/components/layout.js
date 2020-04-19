@@ -83,7 +83,7 @@ function Me() {
       me: file(relativePath: { eq: "me.png" }) {
         childImageSharp {
           fixed(width: 50, quality: 100) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

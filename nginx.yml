@@ -1,5 +1,5 @@
-name: my-site
-domain-root: local.com
+name: me
+domain-root: me.dev
 mappings:
   - port: 8000
-    prefix: me
+    prefix:

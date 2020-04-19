@@ -13,7 +13,7 @@ const Bio = () => {
       me: file(relativePath: { eq: "me.png" }) {
         childImageSharp {
           fixed(width: 150, quality: 100) {
-            ...GatsbyImageSharpFixed
+            ...GatsbyImageSharpFixed_withWebp_tracedSVG
           }
         }
       }

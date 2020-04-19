@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SEO from 'components/seo';
 import { graphql } from 'gatsby';
+import { rhythm } from 'utils/typography';
 import styled from 'styled-components';
 
 function BlogPostTemplate({ data: { mdx: post } }) {
@@ -19,7 +20,7 @@ function BlogPostTemplate({ data: { mdx: post } }) {
 }
 
 BlogPostTemplate.propTypes = {
-  data: PropTypes.shape({}).isRrequired
+  data: PropTypes.shape({})
 };
 
 export default BlogPostTemplate;
@@ -47,4 +48,5 @@ export const pageQuery = graphql`
 const BlogBody = styled.article`
   width: 800px;
   margin: 0 auto;
+  padding-top: ${rhythm(2)};
 `;

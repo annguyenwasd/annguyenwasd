@@ -1,5 +1,4 @@
-import Bio, { imgType } from 'components/bio';
-
+import Bio from 'components/bio';
 import Layout from 'components/layout';
 import React from 'react';
 import SEO from 'components/seo';
@@ -13,8 +12,6 @@ function About() {
   );
 }
 
-About.propTypes = {
-  data: imgType
-};
+About.propTypes = {};
 
 export default About;
