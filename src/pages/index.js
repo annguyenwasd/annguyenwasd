@@ -1,6 +1,6 @@
-import Bio, { imgType } from 'components/bio';
 import { Link, graphql } from 'gatsby';
 
+import Bio from 'components/bio';
 import Container600 from 'utils/container-600';
 import Layout from 'components/layout';
 import PropTypes from 'prop-types';
@@ -10,14 +10,13 @@ import styled from 'styled-components';
 
 function IndexPage({
   data: {
-    allMdx: { edges: posts },
-    me
+    allMdx: { edges: posts }
   }
 }) {
   return (
-    <Layout>
+    <Layout brand={<Link to="/">@annguyenwasd</Link>}>
       <SEO title="Home" />
-      <Bio img={me} />
+      <Bio />
       <PostList>
         <ul>
           {posts.map(({ node: post }) => (
@@ -35,8 +34,7 @@ function IndexPage({
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    allMdx: PropTypes.shape({}).isRequird,
-    me: imgType
+    allMdx: PropTypes.shape({}).isRequird
   })
 };
 
@@ -54,13 +52,6 @@ export const query = graphql`
           frontmatter {
             title
           }
-        }
-      }
-    }
-    me: file(relativePath: { eq: "me.png" }) {
-      childImageSharp {
-        fixed(width: 150, quality: 100) {
-          ...GatsbyImageSharpFixed
         }
       }
     }

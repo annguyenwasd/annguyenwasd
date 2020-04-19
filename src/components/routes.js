@@ -6,9 +6,6 @@ import styled from 'styled-components';
 function Routes() {
   return (
     <Navigation>
-      <Link to="/" title="home">
-        /
-      </Link>
       <Link to="/experience" title="experience">
         experience
       </Link>

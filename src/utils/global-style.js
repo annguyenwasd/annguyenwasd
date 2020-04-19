@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  a {
-    color: ${p => p.theme.foreground};    
-    text-decoration: none;
-  }
 
    body {
     background-color: ${p => p.theme.background}; 
@@ -13,5 +9,16 @@ export default createGlobalStyle`
     *::selection {
       background-color: ${p => p.theme.selectionBackground};
     }
-   }
-`;
+
+    a {
+      color: ${p => p.theme.foreground};    
+      text-decoration: none;
+    }
+
+   
+
+    ul > li > a {
+      color: ${p => p.theme.link.normal};
+    }
+  } 
+}`;

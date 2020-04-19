@@ -4,13 +4,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import SEO from 'components/seo';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 function BlogPostTemplate({ data: { mdx: post } }) {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <h1>{post.frontmatter.title}</h1>
-      <MDXRenderer>{post.body}</MDXRenderer>
+      <BlogBody>
+        <h1>{post.frontmatter.title}</h1>
+        <MDXRenderer>{post.body}</MDXRenderer>
+      </BlogBody>
     </Layout>
   );
 }
@@ -39,4 +42,9 @@ export const pageQuery = graphql`
       }
     }
   }
+`;
+
+const BlogBody = styled.article`
+  width: 800px;
+  margin: 0 auto;
 `;

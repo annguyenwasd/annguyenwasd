@@ -1,5 +1,8 @@
 {
   "background": "#EAEADA",
   "foreground": "#322a2a",
-  "selectionBackground": "#ADD6FF80"
+  "selectionBackground": "#ADD6FF80",
+  "link": {
+    "normal": "#001080"
+  }
 }

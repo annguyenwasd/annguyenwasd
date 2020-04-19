@@ -1,31 +1,35 @@
 import Typing, { Heading } from 'components/type';
+import { graphql, useStaticQuery } from 'gatsby';
 
 import Container600 from 'utils/container-600';
 import Img from 'gatsby-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Social from 'components/socials';
 import styled from 'styled-components/macro';
 
-const Bio = ({ img }) => {
+const Bio = () => {
+  const data = useStaticQuery(graphql`
+    {
+      me: file(relativePath: { eq: "me.png" }) {
+        childImageSharp {
+          fixed(width: 150, quality: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
   return (
     <Container>
-      <Img fixed={img.childImageSharp.fixed} alt="It's me" />
+      <Img fixed={data.me.childImageSharp.fixed} alt="It's me" />
       <Typing />
       <Social />
     </Container>
   );
 };
 
-export const imgType = PropTypes.shape({
-  childImageSharp: PropTypes.shape({
-    fixed: PropTypes.shape({})
-  })
-});
-
-Bio.propTypes = {
-  img: imgType
-};
+Bio.propTypes = {};
 
 Bio.defaultProps = {};
 
