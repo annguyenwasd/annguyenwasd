@@ -7,7 +7,7 @@ Every time we start a project with following url: **http://localhost:PORT**, rig
 **https://project-local.com** or **https://cool-project.dev**. If this is your problem, I'll show 
 you a solution: **[dev-nginx](https://github.com/guardian/dev-nginx)**
 
-Install instruction and commands explanations is written very detail in its repo page **[dev-nginx repo](https://github.com/guardian/dev-nginx)**. In this post, I'll show you how to setup
+Install instructions and commands are explained very detail in **[its repo page](https://github.com/guardian/dev-nginx)**. In this post, I'll show you how to setup
 
 #### Step 1: Config file
 You can save file this anywhere, but save inside project root folder is da-best,
@@ -29,6 +29,21 @@ Run this command: **dev-nginx add-to-hosts-file your-domain**
 
 ```bash
 dev-nginx add-to-hosts-file local.development
+```
+
+After that your hosts file will be like this
+
+```
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+127.0.0.1	localhost
+255.255.255.255	broadcasthost
+::1             localhost
+127.0.0.1		local.development
 ```
 
 #### Step final: Tell dev-nginx run and parse config file

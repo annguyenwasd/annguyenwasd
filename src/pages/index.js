@@ -18,6 +18,7 @@ function IndexPage({
       <SEO title="Home" />
       <Bio />
       <PostList>
+        <h3>My blog posts:</h3>
         <ul>
           {posts.map(({ node: post }) => (
             <li key={post.id}>
