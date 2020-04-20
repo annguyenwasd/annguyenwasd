@@ -40,7 +40,6 @@
     "react-vertical-timeline-component": "^2.5.0",
     "redux": "^4.0.5",
     "styled-components": "^5.1.0",
-    "styled-theming": "^2.2.0",
     "typeit-react": "^0.1.0",
     "typography": "^0.16.19"
   },
@@ -66,9 +65,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/annguyenwasd/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/annguyenwasd/portfolio/issues"
   }
 }

@@ -20,7 +20,7 @@ function BlogPostTemplate({ data: { mdx: post } }) {
 }
 
 BlogPostTemplate.propTypes = {
-  data: PropTypes.shape({})
+  data: PropTypes.shape({ mdx: PropTypes.shape({}) })
 };
 
 export default BlogPostTemplate;
