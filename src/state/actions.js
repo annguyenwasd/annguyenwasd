@@ -1,1 +1,1 @@
-export const changeMode = mode => ({ type: 'CHANGE_MODE', data: { mode } });
+export const changeTheme = theme => ({ type: 'CHANGE_THEME', data: { theme } });
