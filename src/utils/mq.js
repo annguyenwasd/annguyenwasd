@@ -1,6 +1,6 @@
 import { useMediaQuery } from 'react-responsive';
 
-export default function useMq() {
+export default function() {
   const isDesktopOrLaptop = useMediaQuery({
     query: '(min-device-width: 1224px)'
   });
@@ -19,6 +19,9 @@ export default function useMq() {
   });
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
   const isRetina = useMediaQuery({ query: '(min-resolution: 2dppx)' });
+  const isTabletOrMobile = useMediaQuery({
+    query: '(max-width: 768px)'
+  });
 
   return {
     isDesktopOrLaptop,
@@ -28,6 +31,7 @@ export default function useMq() {
     isTabletOrMobileDevicePortrait,
     isTabletOrMobilePortrait,
     isPortrait,
-    isRetina
+    isRetina,
+    isTabletOrMobile
   };
 }

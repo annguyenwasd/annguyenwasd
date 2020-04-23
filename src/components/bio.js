@@ -9,7 +9,7 @@ import styled from 'styled-components/macro';
 import useMq from 'utils/mq';
 
 const Bio = () => {
-  const { isTabletOrMobilePortrait } = useMq();
+  const { isDesktopOrLaptop } = useMq();
   const data = useStaticQuery(graphql`
     {
       me: file(relativePath: { eq: "me.png" }) {
@@ -27,7 +27,7 @@ const Bio = () => {
       <ImgContainer>
         <Img fluid={data.me.childImageSharp.fluid} alt="It's me" />
       </ImgContainer>
-      {isTabletOrMobilePortrait ? <div>&nbsp;</div> : <Typing />}
+      {isDesktopOrLaptop && <Typing />}
       <Social />
     </Container>
   );
@@ -41,7 +41,7 @@ export default Bio;
 
 const Container = styled(Container600)`
   display: grid;
-  grid-template-rows: 100px 40px 40px;
+  grid-template-rows: 100px 40px;
   grid-gap: 10px;
   justify-items: center;
 

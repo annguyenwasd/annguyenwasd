@@ -8,26 +8,26 @@ import { Tree } from '@styled-icons/boxicons-solid';
 import { connect } from 'react-redux';
 import { rhythm } from 'utils/typography';
 import styled from 'styled-components/macro';
-import useMq from 'utils/mq';
+import useMediaQuery from 'utils/mq';
 
 const Header = ({ onSwitch, brand, theme }) => {
-  const { isTabletOrMobilePortrait } = useMq();
+  const { isTabletOrMobile } = useMediaQuery();
   const [showHeader, setShowHeader] = useState(false);
 
-  const Navigation = isTabletOrMobilePortrait ? TabletNav : DesktopNav;
-  const BackDrop = isTabletOrMobilePortrait ? FullDevice : React.Fragment;
+  const Navigation = isTabletOrMobile ? TabletNav : DesktopNav;
+  const BackDrop = isTabletOrMobile ? FullDevice : React.Fragment;
 
   useEffect(() => {
-    if (!isTabletOrMobilePortrait) {
+    if (!isTabletOrMobile) {
       setShowHeader(true);
     } else {
       setShowHeader(false);
     }
-  }, [isTabletOrMobilePortrait]);
+  }, [isTabletOrMobile]);
 
   return (
     <Container>
-      {isTabletOrMobilePortrait ? (
+      {isTabletOrMobile ? (
         <Toggle
           onClick={() => {
             setShowHeader(!showHeader);
@@ -42,7 +42,7 @@ const Header = ({ onSwitch, brand, theme }) => {
       {showHeader && (
         <BackDrop>
           <Navigation>
-            {isTabletOrMobilePortrait && <Link to="/">home</Link>}
+            {isTabletOrMobile && <Link to="/">home</Link>}
             <Link to="/experience" title="experience">
               experience
             </Link>
