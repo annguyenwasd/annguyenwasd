@@ -27,7 +27,7 @@ const Bio = () => {
       <ImgContainer>
         <Img fluid={data.me.childImageSharp.fluid} alt="It's me" />
       </ImgContainer>
-      {isTabletOrMobilePortrait ? <span /> : <Typing />}
+      {isTabletOrMobilePortrait ? <div>&nbsp;</div> : <Typing />}
       <Social />
     </Container>
   );
