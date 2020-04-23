@@ -26,7 +26,7 @@ function Typing({ themeName }) {
           startDelay: 1000
         }}
         getBeforeInit={instance => {
-          const texts = ['An (pronounce: /ʌn/)', 'a front-end developer'];
+          const texts = ['An (pronounce: /&#581;n/)', 'a front-end developer'];
           instance.type('I am ');
 
           texts.forEach(text => {
