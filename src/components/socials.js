@@ -13,24 +13,24 @@ function Social() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Github title="@annguyenwasd" />
+        <Github title="@annguyenwasd" size="36" />
       </a>
       <a
         href="https://twitter.com/annguyenwasd"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Twitter title="@annguyenwasd" />
+        <Twitter title="@annguyenwasd" size="36" />
       </a>
       <a
         href="skype:live:an.nguyenwasd?chat"
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Skype />
+        <Skype size="36" />
       </a>
       <a href="mailto:an.nguyenwasd@gmail.com" rel="noopener noreferrer">
-        <MailSend />
+        <MailSend size="36" />
       </a>
     </Wrapper>
   );
