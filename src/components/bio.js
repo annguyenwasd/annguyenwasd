@@ -6,8 +6,10 @@ import Img from 'gatsby-image';
 import React from 'react';
 import Social from 'components/socials';
 import styled from 'styled-components/macro';
+import useMq from 'utils/mq';
 
 const Bio = () => {
+  const { isTabletOrMobilePortrait } = useMq();
   const data = useStaticQuery(graphql`
     {
       me: file(relativePath: { eq: "me.png" }) {
@@ -25,7 +27,7 @@ const Bio = () => {
       <ImgContainer>
         <Img fluid={data.me.childImageSharp.fluid} alt="It's me" />
       </ImgContainer>
-      <Typing />
+      {isTabletOrMobilePortrait ? <span /> : <Typing />}
       <Social />
     </Container>
   );
@@ -42,10 +44,6 @@ const Container = styled(Container600)`
   grid-template-rows: 100px 40px 40px;
   grid-gap: 10px;
   justify-items: center;
-
-  ${Heading} {
-    padding-left: 30%;
-  }
 
   @media screen and (min-width: 769px) {
     grid-gap: 20px;

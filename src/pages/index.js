@@ -61,7 +61,6 @@ export const query = graphql`
 
 const PostList = styled(Container600)`
   max-width: 500px;
-  padding-left: 100px;
 
   @media screen and (min-width: 769px) {
     padding-left: 100px;
