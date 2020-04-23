@@ -6,7 +6,6 @@ import Layout from 'components/layout';
 import PropTypes from 'prop-types';
 import React from 'react';
 import SEO from 'components/seo';
-import { rhythm } from 'utils/typography';
 import styled from 'styled-components';
 
 function IndexPage({

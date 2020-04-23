@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from 'utils/global-style';
-import Header from 'components/Header';
+import Header from 'components/header';
 import Me from 'components/me';
 import PropTypes from 'prop-types';
 import { changeTheme } from 'state/actions';
