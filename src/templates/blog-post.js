@@ -13,7 +13,9 @@ function BlogPostTemplate({ data: { mdx: post } }) {
       <SEO title={post.frontmatter.title} />
       <BlogBody>
         <h1>{post.frontmatter.title}</h1>
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <MarkdownContent>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </MarkdownContent>
       </BlogBody>
     </Layout>
   );
@@ -46,7 +48,14 @@ export const pageQuery = graphql`
 `;
 
 const BlogBody = styled.article`
-  width: 800px;
-  margin: 0 auto;
   padding-top: ${rhythm(2)};
+
+  @media screen and (min-width: 769px) {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+`;
+
+const MarkdownContent = styled.div`
+  max-width: calc(100vw - ${rhythm(1.25 * 2)});
 `;

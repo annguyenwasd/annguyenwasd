@@ -3,15 +3,16 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import TypeIt from 'typeit-react';
 import { connect } from 'react-redux';
+import { scale } from 'utils/typography';
 import styled from 'styled-components';
 
-function Typing({ themeMode }) {
+function Typing({ themeName }) {
   const [typeIt, setTypeIt] = useState(null);
   const [key, setKey] = useState(Date.now());
 
   useEffect(() => {
     setKey(Date.now());
-  }, [themeMode]);
+  }, [themeName]);
 
   return (
     <Heading>
@@ -23,7 +24,6 @@ function Typing({ themeMode }) {
           loop: true,
           speed: 50,
           startDelay: 1000
-          // loopDelay: 60000
         }}
         getBeforeInit={instance => {
           const texts = ['An (pronounce: /ʌn/)', 'a front-end developer'];
@@ -49,14 +49,19 @@ function Typing({ themeMode }) {
 
 export const Heading = styled.div`
   font-weight: 300;
-  font-size: 1.5rem;
   width: 100%;
+
+  @media screen and (min-width: 769px) {
+    ${scale(0.7)}
+  }
 `;
 
 Typing.propTypes = {
-  themeMode: PropTypes.string.isRequired
+  themeName: PropTypes.string.isRequired
 };
 
 Typing.defaultProps = {};
 
-export default connect(state => ({ themeMode: state.mode }), null)(Typing);
+export default connect(state => ({ themeName: state.theme }))(
+  React.memo(Typing)
+);

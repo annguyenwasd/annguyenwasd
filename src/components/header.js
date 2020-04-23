@@ -20,6 +20,8 @@ const Header = ({ onSwitch, brand, theme }) => {
   useEffect(() => {
     if (!isTabletOrMobilePortrait) {
       setShowHeader(true);
+    } else {
+      setShowHeader(false);
     }
   }, [isTabletOrMobilePortrait]);
 

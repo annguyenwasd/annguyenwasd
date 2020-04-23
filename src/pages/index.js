@@ -6,6 +6,7 @@ import Layout from 'components/layout';
 import PropTypes from 'prop-types';
 import React from 'react';
 import SEO from 'components/seo';
+import { rhythm } from 'utils/typography';
 import styled from 'styled-components';
 
 function IndexPage({
@@ -60,5 +61,10 @@ export const query = graphql`
 `;
 
 const PostList = styled(Container600)`
+  max-width: 500px;
   padding-left: 100px;
+
+  @media screen and (min-width: 769px) {
+    padding-left: 100px;
+  }
 `;
