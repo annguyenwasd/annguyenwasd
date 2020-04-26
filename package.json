@@ -68,7 +68,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "prepublish": "npm run eslint",
+    "publish": "gatsby build",
+    "build": "npm run publish",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
