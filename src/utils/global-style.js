@@ -21,4 +21,4 @@ export default createGlobalStyle`
       color: ${p => p.theme.link.normal};
     }
   } 
-}`;
+`;
