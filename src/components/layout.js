@@ -17,7 +17,7 @@ function Layout({ children, theme, onChangeTheme, brand }) {
     if (storedMode && storedMode !== theme) {
       onChangeTheme(storedMode);
     }
-  }, []);
+  }, [onChangeTheme, theme]);
 
   return (
     <ThemeProvider
