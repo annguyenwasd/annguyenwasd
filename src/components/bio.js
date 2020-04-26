@@ -1,11 +1,12 @@
-import Typing, { Heading } from 'components/typing';
-import { graphql, useStaticQuery } from 'gatsby';
-
-import Container600 from 'utils/container-600';
-import Img from 'gatsby-image';
 import React from 'react';
-import Social from 'components/socials';
+
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components/macro';
+
+import Social from 'components/socials';
+import Typing, { Heading } from 'components/typing';
+import Container600 from 'utils/container-600';
 import useMq from 'utils/mq';
 
 const Bio = () => {

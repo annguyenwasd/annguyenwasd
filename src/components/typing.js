@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-
 import PropTypes from 'prop-types';
-import TypeIt from 'typeit-react';
 import { connect } from 'react-redux';
-import { scale } from 'utils/typography';
+
 import styled from 'styled-components';
+import TypeIt from 'typeit-react';
+
+import { scale } from 'utils/typography';
 
 function Typing({ themeName }) {
   const [typeIt, setTypeIt] = useState(null);

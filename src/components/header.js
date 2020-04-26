@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
-
-import { Link } from 'gatsby';
-import { Menu } from '@styled-icons/boxicons-regular';
 import PropTypes from 'prop-types';
-import Switch from 'components/theme-switch';
-import { Tree } from '@styled-icons/boxicons-solid';
 import { connect } from 'react-redux';
-import { rhythm } from 'utils/typography';
+
+import { Menu } from '@styled-icons/boxicons-regular';
+import { Tree } from '@styled-icons/boxicons-solid';
+import { Link } from 'gatsby';
 import styled from 'styled-components/macro';
+
+import Switch from 'components/theme-switch';
 import useMediaQuery from 'utils/mq';
+import { rhythm } from 'utils/typography';
 
 const Header = ({ onSwitch, brand, theme }) => {
   const { isTabletOrMobile } = useMediaQuery();

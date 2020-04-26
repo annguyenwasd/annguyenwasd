@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import styled, { ThemeContext } from 'styled-components';
-
-import { Moon } from '@styled-icons/boxicons-solid';
 import PropTypes from 'prop-types';
-import { Sun } from '@styled-icons/boxicons-regular';
 import Switch from 'react-switch';
+
+import { Sun } from '@styled-icons/boxicons-regular';
+import { Moon } from '@styled-icons/boxicons-solid';
+import styled, { ThemeContext } from 'styled-components';
 
 function ThemeModeToggle({ checked, onChange }) {
   const theme = useContext(ThemeContext);

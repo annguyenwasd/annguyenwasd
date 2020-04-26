@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+
 import styled, { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from 'utils/global-style';
 import Header from 'components/header';
 import Me from 'components/me';
-import PropTypes from 'prop-types';
 import { changeTheme } from 'state/actions';
-import { connect } from 'react-redux';
+import GlobalStyle from 'utils/global-style';
 import darkTheme from 'utils/theme/dark';
 import lightTheme from 'utils/theme/light';
 import { rhythm } from 'utils/typography';

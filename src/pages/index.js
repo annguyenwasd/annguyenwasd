@@ -1,12 +1,13 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import { Link, graphql } from 'gatsby';
+import styled from 'styled-components';
 
 import Bio from 'components/bio';
-import Container600 from 'utils/container-600';
 import Layout from 'components/layout';
-import PropTypes from 'prop-types';
-import React from 'react';
 import SEO from 'components/seo';
-import styled from 'styled-components';
+import Container600 from 'utils/container-600';
 
 function IndexPage({
   data: {

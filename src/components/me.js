@@ -1,7 +1,7 @@
-import { Link, graphql, useStaticQuery } from 'gatsby';
-
-import Img from 'gatsby-image';
 import React from 'react';
+
+import { Link, graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
 function Me() {
   const data = useStaticQuery(graphql`

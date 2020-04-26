@@ -60,6 +60,8 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.5",
+    "import-sort-cli": "^6.0.0",
+    "import-sort-style-react": "^5.1.0",
     "prettier": "^1.19.1",
     "react-is": "^16.13.1"
   },
@@ -79,7 +81,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "sort-imports": "./node_modules/import-sort-cli/lib/index.js --write ./src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -90,7 +93,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run eslint"
+      "pre-commit": "npm run sort-imports; git add .;npm run eslint"
+    }
+  },
+  "importSort": {
+    ".js": {
+      "style": "react"
     }
   }
 }

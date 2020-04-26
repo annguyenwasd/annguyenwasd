@@ -1,18 +1,19 @@
 import 'react-vertical-timeline-component/style.min.css';
 
-import { Angular, ReactLogo } from '@styled-icons/boxicons-logos';
-import { CodeCurly, Star } from '@styled-icons/boxicons-regular';
+import React from 'react';
 import {
   VerticalTimeline,
   VerticalTimelineElement
 } from 'react-vertical-timeline-component';
 
-import Layout from 'components/layout';
-import React from 'react';
-import SEO from 'components/seo';
-import XP from 'components/experience';
-import exp from 'data/exp';
+import { Angular, ReactLogo } from '@styled-icons/boxicons-logos';
+import { CodeCurly, Star } from '@styled-icons/boxicons-regular';
 import styled from 'styled-components';
+
+import XP from 'components/experience';
+import Layout from 'components/layout';
+import SEO from 'components/seo';
+import exp from 'data/exp';
 
 const timelineLogos = {
   [ReactLogo.displayName]: <ReactLogo />,

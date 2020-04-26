@@ -1,11 +1,13 @@
-import Layout from 'components/layout';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import PropTypes from 'prop-types';
 import React from 'react';
-import SEO from 'components/seo';
+import PropTypes from 'prop-types';
+
 import { graphql } from 'gatsby';
-import { rhythm } from 'utils/typography';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from 'styled-components';
+
+import Layout from 'components/layout';
+import SEO from 'components/seo';
+import { rhythm } from 'utils/typography';
 
 function BlogPostTemplate({ data: { mdx: post } }) {
   return (

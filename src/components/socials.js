@@ -1,7 +1,7 @@
-import { Github, Skype, Twitter } from '@styled-icons/boxicons-logos';
-
-import { MailSend } from '@styled-icons/boxicons-regular';
 import React from 'react';
+
+import { Github, Skype, Twitter } from '@styled-icons/boxicons-logos';
+import { MailSend } from '@styled-icons/boxicons-regular';
 import { StyledIconBase } from '@styled-icons/styled-icon';
 import styled from 'styled-components';
 
