@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { Buildings } from '@styled-icons/boxicons-solid';
 import styled from 'styled-components';
 
 function Experience({ date, icon, title, subTitle, content }) {
@@ -43,7 +43,13 @@ const SubTitle = styled.h4`
   }
 `;
 
-Experience.propTypes = {};
+Experience.propTypes = {
+  date: PropTypes.string.isRequired,
+  icon: PropTypes.Element.isRequired,
+  content: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired
+};
 
 Experience.defaultProps = {};
 

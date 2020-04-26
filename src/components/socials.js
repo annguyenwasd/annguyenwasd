@@ -54,4 +54,4 @@ Social.propTypes = {};
 
 Social.defaultProps = {};
 
-export default Social;
+export default React.memo(Social);
