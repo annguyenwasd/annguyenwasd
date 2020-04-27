@@ -14,7 +14,12 @@ function BlogPostTemplate({ data: { mdx: post } }) {
     <Layout>
       <SEO title={post.frontmatter.title} />
       <BlogBody>
-        <h1>{post.frontmatter.title}</h1>
+        <h1>
+          {post.frontmatter.title}
+          <small>
+            <small className="post-date">{post.frontmatter.date}</small>
+          </small>
+        </h1>
         <MarkdownContent>
           <MDXRenderer>{post.body}</MDXRenderer>
         </MarkdownContent>
@@ -51,6 +56,16 @@ export const pageQuery = graphql`
 
 const BlogBody = styled.article`
   padding-top: ${rhythm(2)};
+
+  h1 .post-date {
+    color: grey;
+    opacity: 0.7;
+    font-weight: normal;
+
+    &:before {
+      content: ' - ';
+    }
+  }
 
   @media screen and (min-width: 769px) {
     max-width: 800px;

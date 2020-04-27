@@ -25,6 +25,7 @@ function IndexPage({
             <li key={post.id}>
               <Link to={`/blog/${post.fields.slug}`}>
                 {post.frontmatter.title}
+                <small className="post-date">{post.frontmatter.date}</small>
               </Link>
             </li>
           ))}
@@ -53,6 +54,7 @@ export const query = graphql`
           }
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }
@@ -62,6 +64,15 @@ export const query = graphql`
 
 const PostList = styled(Container600)`
   max-width: 500px;
+
+  .post-date {
+    color: grey;
+    opacity: 0.8;
+
+    &::before {
+      content: ' ';
+    }
+  }
 
   @media screen and (min-width: 769px) {
     padding-left: 100px;
