@@ -3,6 +3,8 @@
   "foreground": "#D4D4D4",
   "selectionBackground": "#ADD6FF26",
   "link": {
-    "normal": "#9CDCFE"
-  }
+    "normal": "#9CDCFE",
+    "danger": "#e73320e0"
+  },
+  "dim": "#4d4545"
 }

@@ -70,7 +70,7 @@ const PostList = styled(Container600)`
     opacity: 0.8;
 
     &::before {
-      content: ' ';
+      content: ' - ';
     }
   }
 

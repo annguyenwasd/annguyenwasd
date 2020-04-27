@@ -67,6 +67,23 @@ const BlogBody = styled.article`
     }
   }
 
+  code:not(.grvsc-code) {
+    color: ${p => p.theme.dim};
+    font-weight: bold;
+    font-size: inherit;
+    border-radius: 2px;
+    padding: 2px 4px;
+    background-color: lightgrey;
+  }
+
+  a {
+    color: ${p => p.theme.link.danger};
+
+    &:empty {
+      border-color: 1px solid ${p => p.theme.link.danger};
+    }
+  }
+
   @media screen and (min-width: 769px) {
     max-width: 800px;
     margin: 0 auto;
