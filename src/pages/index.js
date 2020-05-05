@@ -37,7 +37,7 @@ function IndexPage({
 
 IndexPage.propTypes = {
   data: PropTypes.shape({
-    allMdx: PropTypes.shape({}).isRequird
+    allMdx: PropTypes.arrayOf(PropTypes.object)
   })
 };
 
