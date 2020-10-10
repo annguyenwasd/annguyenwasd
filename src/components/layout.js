@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { Link } from 'gatsby';
 import styled, { ThemeProvider } from 'styled-components';
 
 import Header from 'components/header';
-import Me from 'components/me';
+import { MyImage } from 'components/MyImage';
 import { changeTheme } from 'state/actions';
 import GlobalStyle from 'utils/global-style';
 import darkTheme from 'utils/theme/dark';
@@ -66,7 +67,11 @@ Layout.propTypes = {
 };
 
 Layout.defaultProps = {
-  brand: <Me />
+  brand: (
+    <Link to="/">
+      <MyImage size={50} />
+    </Link>
+  )
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout);

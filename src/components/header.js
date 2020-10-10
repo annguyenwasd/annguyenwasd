@@ -44,9 +44,6 @@ const Header = ({ onSwitch, brand, theme }) => {
         <BackDrop>
           <Navigation>
             {isTabletOrMobile && <Link to="/">home</Link>}
-            <Link to="/experience" title="experience">
-              experience
-            </Link>
             <Link to="/about" title="about">
               about
             </Link>

@@ -1,17 +1,29 @@
 import React from 'react';
 
-import Bio from 'components/bio';
+import styled from 'styled-components';
+
 import Layout from 'components/layout';
 import SEO from 'components/seo';
+import Social from 'components/socials';
 
 function About() {
   return (
     <Layout>
       <SEO title="About" />
-      <Bio />
+      <Container>
+        <p>{`Hi, I'm An /ʌn/`}</p>
+        <Social />
+      </Container>
     </Layout>
   );
 }
+
+const Container = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+`;
 
 About.propTypes = {};
 

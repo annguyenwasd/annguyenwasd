@@ -1,6 +1,7 @@
 ---
 title: Order imports in React application
 date: 2020-04-27
+excerpt: ahihi
 ---
 
 Have you ever seen a huge import block like this:
@@ -76,7 +77,7 @@ Run follow in commands
 npm install --save-dev import-sort-style-react import-sort-cli
 ```
 
-or 
+or
 ```
 yarn add -D import-sort-style-react import-sort-cli
 ```

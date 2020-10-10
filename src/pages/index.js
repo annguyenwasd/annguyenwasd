@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import Bio from 'components/bio';
 import Layout from 'components/layout';
 import SEO from 'components/seo';
 import Container600 from 'utils/container-600';
@@ -17,7 +16,6 @@ function IndexPage({
   return (
     <Layout brand={<Link to="/">@annguyenwasd</Link>}>
       <SEO title="Home" />
-      <Bio />
       <PostList>
         <h3>My blog posts:</h3>
         <ul>
