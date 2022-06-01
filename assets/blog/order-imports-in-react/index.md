@@ -1,7 +1,6 @@
 ---
 title: Order imports in React application
 date: 2020-04-27
-excerpt: ahihi
 ---
 
 Have you ever seen a huge import block like this:

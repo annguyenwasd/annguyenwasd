@@ -1,17 +1,17 @@
 ---
-title: Local domain name & local ssl with dev-nginx
+title: Local domain name & local SSL with dev-nginx
 date: 2020-04-19
 ---
 
-Every time we start a project with following url: **http://localhost:PORT**, right? Have you ever think about another way to access local development url, like 
+Every time we start a project with the following URL: **http://localhost:PORT**, right? Have you ever thought about another way to access local development URL, like 
 **https://project-local.com** or **https://cool-project.dev**. If this is your problem, I'll show 
 you a solution: **[dev-nginx](https://github.com/guardian/dev-nginx)**
 
-Install instructions and commands are explained very detail in **[its repo page](https://github.com/guardian/dev-nginx)**. In this post, I'll show you how to setup
+Install instructions and commands are explained in very detail in **[its repo page](https://github.com/guardian/dev-nginx)**. In this post, I'll show you how to setup
 
 #### Step 1: Config file
-You can save file this anywhere, but save inside project root folder is da-best,
-other developer can use your config file.
+You can save the config file anywhere, but save inside the project root folder is da-best,
+other developers can use your config file.
 
 ```yml
 #nginx.yml
@@ -19,7 +19,7 @@ name: my-cool-project # This name will be created as nginx config file in /usr/l
 domain-root: local.development # Domain name you want
 mappings:
   - port: 3009 # port your project listening
-    prefix: # Leave it blank. If you provide something. Ex: project. Then you should access via project.local.development
+    prefix: # Leave it blank. If you provide something. Ex: project. Then you should access it via project. local.development
 # If you leave this config file like this
 # You will forward http://localhost:3990 to https://local.development
 ```
@@ -31,14 +31,14 @@ Run this command: **dev-nginx add-to-hosts-file your-domain**
 dev-nginx add-to-hosts-file local.development
 ```
 
-After that your hosts file will be like this
+After that, your *host* file will be like this
 
 ```
 ##
 # Host Database
 #
 # localhost is used to configure the loopback interface
-# when the system is booting.  Do not change this entry.
+# when the system is booting. Do not change this entry.
 ##
 127.0.0.1	localhost
 255.255.255.255	broadcasthost
