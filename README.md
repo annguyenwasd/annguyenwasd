@@ -1,1 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/682bf5de-f63b-4980-b71a-349fe45fae98/deploy-status)](https://app.netlify.com/sites/annguyenwasd/deploys)
+Hi ✋
+This is An. Thank you for visiting my profile. Here are the things you may interested in:
+- My website: https://annguyen.dev 
+- My dotfiles: https://github.com/annguyenwasd/dotfiles
