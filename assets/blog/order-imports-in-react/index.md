@@ -40,7 +40,7 @@ import "./a";
 import "./c";
 import "./b";
 
-// Modules from the React eco-system (react, prop-types, redux modules) library sorted by name
+// Modules from the React ecosystem (react, prop-types, redux modules) library sorted by name
 import React from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";

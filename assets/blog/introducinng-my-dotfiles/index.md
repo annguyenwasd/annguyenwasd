@@ -124,7 +124,7 @@ stow neovim
 - press `v` to start selection in `copy` mode, press `y` to copy text
 - support mouse's scroll wheel
 - customize theme to show minial info
-  - left: `[section name] [window number]:[window name] [Z: if has zoomed] [-: if last window used]
+  - left: `[section name] [window number]:[window name] [Z: if tmux has zoomed] [-: if last window used]
   - right: [time] [date]
 ![Tmux status line](./tmux.png)
 

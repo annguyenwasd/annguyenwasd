@@ -7,7 +7,7 @@ Every time we start a project with the following URL: **http://localhost:PORT**,
 **https://project-local.com** or **https://cool-project.dev**. If this is your problem, I'll show 
 you a solution: **[dev-nginx](https://github.com/guardian/dev-nginx)**
 
-Install instructions and commands are explained in very detail in **[its repo page](https://github.com/guardian/dev-nginx)**. In this post, I'll show you how to setup
+Install instructions and commands are explained in very detail in **[its repo page](https://github.com/guardian/dev-nginx)**. In this post, I'll show you how to set up
 
 #### Step 1: Config file
 You can save the config file anywhere, but save inside the project root folder is da-best,
